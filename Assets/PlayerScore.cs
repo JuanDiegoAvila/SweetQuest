@@ -24,21 +24,21 @@ public class PlayerScore : MonoBehaviour
         // Update the UI if you have one
         if (scoreText != null)
         {
-            scoreText.text = "Score: " + currentScore;
+            scoreText.text = "x " + currentScore;
         }
 
         collectibleCount--;
 
-        if (collectibleCount <= 0)
-        {
-            AllCollectiblesCollected();
-        }
+        // if (collectibleCount <= 0)
+        // {
+        //     AllCollectiblesCollected();
+        // }
     }
 
-    void AllCollectiblesCollected()
-    {
-        // All collectibles have been collected
-        Debug.Log("All collectibles collected!");
-        finalText.SetActive(true);
-    }
+    // void AllCollectiblesCollected()
+    // {
+    //     // All collectibles have been collected
+    //     Debug.Log("All collectibles collected!");
+    //     finalText.SetActive(true);
+    // }
 }
