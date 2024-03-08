@@ -26,19 +26,32 @@ public class PlayerScore : MonoBehaviour
         {
             scoreText.text = "x " + currentScore;
         }
-
         collectibleCount--;
 
-        // if (collectibleCount <= 0)
-        // {
-        //     AllCollectiblesCollected();
-        // }
+
+        if (collectibleCount <= 0)
+        {
+            AllCollectiblesCollected();
+        }
     }
 
-    // void AllCollectiblesCollected()
-    // {
-    //     // All collectibles have been collected
-    //     Debug.Log("All collectibles collected!");
-    //     finalText.SetActive(true);
-    // }
+    public void RemoveScore(int scoreToRemove)
+    {
+        currentScore -= scoreToRemove;
+        if (scoreText != null)
+        {
+                scoreText.text = "x " + currentScore;
+        }
+
+
+         collectibleCount++;
+    }
+
+    void AllCollectiblesCollected()
+    {
+        //// All collectibles have been collected
+        //Debug.Log("All collectibles collected!");
+        //finalText.SetActive(true);
+        // Activar texto en canva
+    }
 }
